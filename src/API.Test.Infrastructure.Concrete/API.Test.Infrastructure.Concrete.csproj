@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+	<NoWarn>CA2007,CA1062;CA1303;CA1051</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="3.3.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.8" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="3.1.8" />
+    <PackageReference Include="Serilog" Version="2.10.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\API.Test.Domain\API.Test.Domain.csproj" />
+    <ProjectReference Include="..\API.Test.Infrastructure\API.Test.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

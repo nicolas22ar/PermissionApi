@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<NoWarn>CA2007;CS1591;CA1031</NoWarn>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<GenerateRuntimeConfigurationFiles>True</GenerateRuntimeConfigurationFiles>
+		<DocumentationFile>bin\Debug\netcoreapp3.1\API.Test.WebService.xml</DocumentationFile>
+		<OutputPath></OutputPath>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="AutoMapper" Version="9.0.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.2" />
+		<PackageReference Include="Microsoft.AspNetCore.JsonPatch" Version="3.1.1" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.1" />
+		<PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.8">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.8">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.1.1" />
+		<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.2" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="5.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\API.Test.Infrastructure.Concrete\API.Test.Infrastructure.Concrete.csproj" />
+		<ProjectReference Include="..\API.Test.Infrastructure\API.Test.Infrastructure.csproj" />
+	</ItemGroup>
+
+
+</Project>
