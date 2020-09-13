@@ -1,10 +1,10 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using API.Test.Infrastructure.Concrete.Exceptions;
+using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
+using Serilog;
 using System;
 using System.Net;
 using System.Threading.Tasks;
-using Serilog;
-using API.Test.Infrastructure.Concrete.Exceptions;
 
 namespace API.Test.Webservice.Middlewares
 {

@@ -1,16 +1,14 @@
-using System;
 using API.Test.Webservice.Middlewares;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Http;
 using Serilog;
 
 namespace API.Test.WebService.Middlewares
 {
-	/// <summary>
-	/// Static class for middleware exceptions
-	/// </summary>
-	public static class ExceptionMiddlewareExtensionsa
-	{
+    /// <summary>
+    /// Static class for middleware exceptions
+    /// </summary>
+    public static class ExceptionMiddlewareExtensionsa
+    {
         /// <summary>
         /// Handles any exception and produces the corresponding log, status code and response message
         /// </summary>

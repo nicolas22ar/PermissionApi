@@ -1,9 +1,8 @@
 ﻿using API.Test.Domain;
-using DTO = API.Test.Infrastructure.DTOs;
 using AutoFixture;
 using System;
 using System.Collections.Generic;
-using System.Text;
+using DTO = API.Test.Infrastructure.DTOs;
 
 namespace API.Test.Infrastructure.Test.Customizations
 {
@@ -44,7 +43,6 @@ namespace API.Test.Infrastructure.Test.Customizations
                 fixture.Create<DTO.PermissionResponse>(),
                 fixture.Create<DTO.PermissionResponse>(),
                 fixture.Create<DTO.PermissionResponse>()
-
             };
             fixture.Register(() => permissions);
             fixture.Register(() => dto);

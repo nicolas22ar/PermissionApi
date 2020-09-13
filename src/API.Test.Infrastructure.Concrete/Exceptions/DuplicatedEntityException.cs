@@ -15,7 +15,5 @@ namespace API.Test.Infrastructure.Concrete.Exceptions
         public DuplicatedEntityException(string message, Exception innerException) : base(message, innerException)
         {
         }
-
-       
     }
 }

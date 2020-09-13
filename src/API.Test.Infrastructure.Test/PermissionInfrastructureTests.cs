@@ -1,18 +1,18 @@
-﻿using System.Threading.Tasks;
-using API.Test.Domain;
-using API.Test.Infrastructure.Concrete.Services;
-using Xunit;
-using Moq;
-using API.Test.Infrastructure.Test.Attributes;
-using AutoFixture.Xunit2;
-using API.Test.Infrastructure.Repositories;
-using API.Test.Infrastructure.Test.Customizations;
-using DTO = API.Test.Infrastructure.DTOs;
-using AutoMapper;
+﻿using API.Test.Domain;
 using API.Test.Infrastructure.Concrete.Exceptions;
+using API.Test.Infrastructure.Concrete.Services;
+using API.Test.Infrastructure.Repositories;
+using API.Test.Infrastructure.Test.Attributes;
+using API.Test.Infrastructure.Test.Customizations;
 using AutoFixture;
+using AutoFixture.Xunit2;
+using AutoMapper;
+using Moq;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
+using Xunit;
+using DTO = API.Test.Infrastructure.DTOs;
 
 namespace API.Test.Infrastructure.Test
 {

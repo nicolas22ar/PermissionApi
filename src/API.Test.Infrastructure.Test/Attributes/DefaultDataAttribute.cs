@@ -1,9 +1,8 @@
-﻿using System;
-using System.Linq;
-using API.Test.Infrastructure.Test.Customizations;
+﻿using API.Test.Infrastructure.Test.Customizations;
 using AutoFixture;
 using AutoFixture.Xunit2;
-
+using System;
+using System.Linq;
 
 namespace API.Test.Infrastructure.Test.Attributes
 {

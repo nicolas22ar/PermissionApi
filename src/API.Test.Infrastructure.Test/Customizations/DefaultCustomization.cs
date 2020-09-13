@@ -7,8 +7,7 @@ namespace API.Test.Infrastructure.Test.Customizations
     {
         public DefaultCustomization()
             : base(new AutoMoqCustomization())
-        { 
-        
+        {
         }
     }
 }

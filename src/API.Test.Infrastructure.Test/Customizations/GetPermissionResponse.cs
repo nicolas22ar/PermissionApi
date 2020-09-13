@@ -1,7 +1,7 @@
 ﻿using API.Test.Domain;
-using DTO = API.Test.Infrastructure.DTOs;
 using AutoFixture;
 using System;
+using DTO = API.Test.Infrastructure.DTOs;
 
 namespace API.Test.Infrastructure.Test.Customizations
 {
@@ -27,7 +27,8 @@ namespace API.Test.Infrastructure.Test.Customizations
                 Id = 1,
                 EmployeeFirstName = "Test",
                 EmployeeLastName = "Test",
-                Type = new DTO.PermissionType {
+                Type = new DTO.PermissionType
+                {
                     Id = 1,
                     Description = "Test"
                 },

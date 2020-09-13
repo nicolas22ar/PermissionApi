@@ -1,6 +1,6 @@
 ﻿using API.Test.Domain;
-using DTO = API.Test.Infrastructure.DTOs;
 using AutoMapper;
+using DTO = API.Test.Infrastructure.DTOs;
 
 namespace API.Test.Infrastructure.Concrete.Mappers
 {

@@ -13,39 +13,40 @@ namespace API.Test.Infrastructure.Concrete.Repositories
         {
         }
 
-		public async Task AddPermissionAsync(Permission permission)
-		{
-			await _context.Permission.AddAsync(permission);
-		}
+        public async Task AddPermissionAsync(Permission permission)
+        {
+            await _context.Permission.AddAsync(permission);
+        }
 
         public void DeletePermission(Permission permission)
         {
-			_context.Remove(permission);
+            _context.Remove(permission);
         }
 
         public async Task<Permission> GetPermissionAsync(int id)
-		{
-			return await _context.Permission
-				.AsNoTracking()
-				.Include(x => x.Type)
-				.FirstOrDefaultAsync(x => x.Id == id);
-		}
+        {
+            return await _context.Permission
+                .AsNoTracking()
+                .Include(x => x.Type)
+                .FirstOrDefaultAsync(x => x.Id == id);
+        }
 
-		public async Task<Permission> GetPermissionForUpdateAsync(int id)
-		{
-			return await _context.Permission.FirstOrDefaultAsync(x => x.Id == id);
-		}
-		public async Task<IEnumerable<Permission>> GetPermissionsAsync()
-		{
-			return await _context.Permission
-				.AsNoTracking()
-				.Include(x => x.Type).ToListAsync();
-		}
+        public async Task<Permission> GetPermissionForUpdateAsync(int id)
+        {
+            return await _context.Permission.FirstOrDefaultAsync(x => x.Id == id);
+        }
 
-		public void UpdatePermission(Permission permission)
-		{
-			_context.Set<Permission>().Attach(permission);
-			_context.Entry(permission).State = EntityState.Modified;
-		}
-	}
+        public async Task<IEnumerable<Permission>> GetPermissionsAsync()
+        {
+            return await _context.Permission
+                .AsNoTracking()
+                .Include(x => x.Type).ToListAsync();
+        }
+
+        public void UpdatePermission(Permission permission)
+        {
+            _context.Set<Permission>().Attach(permission);
+            _context.Entry(permission).State = EntityState.Modified;
+        }
+    }
 }

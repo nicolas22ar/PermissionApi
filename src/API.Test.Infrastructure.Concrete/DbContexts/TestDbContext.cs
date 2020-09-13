@@ -1,6 +1,6 @@
 using API.Test.Domain;
 using Microsoft.EntityFrameworkCore;
- 
+
 namespace API.Test.Infrastructure.Concrete.DbContexts
 {
     public class TestDbContext : DbContext
@@ -8,18 +8,16 @@ namespace API.Test.Infrastructure.Concrete.DbContexts
         public TestDbContext(DbContextOptions<TestDbContext> options) : base(options)
         {
         }
- 
+
         public virtual DbSet<Permission> Permission { get; set; }
         public virtual DbSet<PermissionType> PermissionType { get; set; }
-        
- 
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
 
             builder.Entity<Permission>(entity =>
             {
-
                 entity.HasOne(x => x.Type)
                     .WithMany()
                     .IsRequired()
@@ -36,15 +34,13 @@ namespace API.Test.Infrastructure.Concrete.DbContexts
                 entity.Property(x => x.EmployeeLastName)
                     .IsRequired()
                     .HasColumnType("varchar(255)");
-
             });
 
-            builder.Entity<PermissionType>(entity => {
-               
-               entity.Property(x => x.Description)
-                    .IsRequired()
-                    .HasColumnType("varchar(255)");
-
+            builder.Entity<PermissionType>(entity =>
+            {
+                entity.Property(x => x.Description)
+                     .IsRequired()
+                     .HasColumnType("varchar(255)");
             });
         }
     }

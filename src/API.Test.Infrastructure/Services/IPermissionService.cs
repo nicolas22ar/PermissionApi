@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using API.Test.Infrastructure.DTOs;
+using System.Collections.Generic;
 using System.Threading.Tasks;
-using API.Test.Infrastructure.DTOs;
 
 namespace API.Test.Infrastructure.Services
 {
